@@ -1,0 +1,326 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HR Portal</title>
+
+    <style>
+    
+
+/* General Page Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(218, 204, 177);
+    color: #333;
+}
+
+header {
+    background-color: #5f5a5a;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 20px;
+}
+
+nav ul li a:hover {
+    background-color: #555;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Image Styling */
+img {
+    display: block;
+    margin: 20px auto;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Form Styling */
+form {
+    width: 90%; /* Changed to a percentage for responsiveness */
+    max-width: 600px; /* Maximum width for larger screens */
+    margin: 20px auto;
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+form label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+form input,
+form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+form input[type="submit"] {
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+    border: none;
+}
+
+form input[type="submit"]:hover {
+    background-color: #555;
+}
+
+/* Table Styling */
+table {
+    width: 90%; /* Changed to a percentage for responsiveness */
+    max-width: 800px; /* Maximum width for larger screens */
+    margin: 20px auto;
+    border-collapse: collapse;
+}
+
+table,
+th,
+td {
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+
+th {
+    background-color: #333;
+    color: white;
+}
+
+td {
+    text-align: center;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: relative; /* Changed to relative for better positioning */
+    width: 100%;
+}
+
+/* Contact Us Section */
+iframe {
+    display: block;
+    margin: 20px auto;
+    border-radius: 8px;
+    width: 90%; /* Responsive width */
+    max-width: 600px; /* Maximum width for larger screens */
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+p {
+    text-align: center;
+}
+
+#contact-us {
+    text-align: center;
+}
+
+#contact-us label,
+#contact-us input {
+    display: inline-block;
+    text-align: center;
+}
+
+#contact-us input[type="email"] {
+    width: 50%;
+    padding: 10px;
+    margin: 10px auto;
+    display: block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    nav ul li {
+        display: block; /* Stack navigation items vertically on smaller screens */
+        margin: 5px 0;
+    }
+
+    form {
+        width: 95%; /* Adjust form width for smaller screens */
+    }
+
+    table {
+        width: 95%; /* Adjust table width for smaller screens */
+    }
+
+    #contact-us input[type="email"] {
+        width: 80%; /* Wider input field on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 24px; /* Smaller heading size on very small screens */
+    }
+
+    nav ul li a {
+        font-size: 16px; /* Smaller font size for navigation links */
+    }
+}
+
+
+
+
+
+
+
+
+
+    </style>
+</head>
+
+<body>
+    <h1>Welcome to HR Portal</h1>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#employee-registration">Employee Registration</a></li>
+                <li><a href="#employee-directory">Employee Directory</a></li>
+                <li><a href="#contact-us">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <img src="https://blog.dovetailsoftware.com/hs-fs/hubfs/Blog%20Images/Happy%20Employee%20Dovetail%20Employee%20Portal.jpg?width=600&name=Happy%20Employee%20Dovetail%20Employee%20Portal.jpg"
+        height="500px" alt="Happy Employee Portal">
+
+    <section id="employee-registration">
+        <h1>Employee Registration</h1>
+        <p>Fill out the form below to register an <em>employee</em>.</p>
+
+        <form id="registrationForm">
+            <label for="name">Enter the name:</label>
+            <input type="text" placeholder="Enter name" id="name" name="name" required>
+
+            <label for="password">Enter the password:</label>
+            <input type="password" placeholder="Enter password" id="password" name="password" required>
+
+            <label for="age">Enter the age:</label>
+            <input type="number" placeholder="Enter age" id="age" name="age" required>
+
+            <label for="dob">Enter DOB:</label>
+            <input type="date" id="dob" name="dob" required>
+
+            <label for="role">Role:</label>
+            <select id="role" name="role">
+                <option value="Software Development">Software Development</option>
+                <option value="Database Developer">Database Developer</option>
+                <option value="Android Developer">Android Developer</option>
+            </select>
+
+            <input type="submit" value="Submit">
+        </form>
+    </section>
+
+    <section id="employee-directory">
+        <h1>Employee Directory</h1>
+        <table id="employeeTable">
+            <tr>
+                <th>Employee ID</th>
+                <th>Name</th>
+                <th>Role</th>
+            </tr>
+            <tr>
+                <td>26C</td>
+                <td>Adarsh Singh</td>
+                <td>Software Development</td>
+            </tr>
+            <tr>
+                <td>59D</td>
+                <td>Raj Singh</td>
+                <td>Android Developer</td>
+            </tr>
+            <tr>
+                <td>78G</td>
+                <td>Alok</td>
+                <td>Database Developer</td>
+            </tr>
+        </table>
+    </section>
+
+    <section id="contact-us">
+        <h1>Contact Us</h1>
+        <p>Just contact us through the HR portal.</p>
+
+        <form action="#" method="POST">
+            <label for="email">Enter your email:</label>
+            <input type="email" placeholder="Enter email id" id="email" name="email" required><br><br>
+        </form>
+
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d113996.60078799841!2d83.4039116!3d26.76371515!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3991446a0c332489%3A0x1ff3f97fdcc6bfa2!2sGorakhpur%2C%20Uttar%20Pradesh!5e0!3m2!1sen!2sin!4v1727204847097!5m2!1sen!2sin"
+            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </section>
+
+    <footer>Company © 2024</footer>
+
+    <script>
+        document.getElementById('registrationForm').addEventListener('submit', function (e) {
+            e.preventDefault(); // Prevent form from submitting
+
+            const name = document.getElementById('name').value;
+            const age = document.getElementById('age').value;
+            const dob = document.getElementById('dob').value;
+            const role = document.getElementById('role').value;
+
+            if (age < 18) {
+                alert('Employee must be 18 or older.');
+                return;
+            }
+
+            const table = document.getElementById('employeeTable');
+            const row = table.insertRow();
+            const idCell = row.insertCell(0);
+            const nameCell = row.insertCell(1);
+            const roleCell = row.insertCell(2);
+
+            idCell.innerHTML = Math.floor(Math.random() * 100) + 'X'; // Random employee ID
+            nameCell.innerHTML = name;
+            roleCell.innerHTML = role;
+
+            alert('Employee registered successfully!');
+            document.getElementById('registrationForm').reset(); // Clear form
+        });
+
+
+
+
